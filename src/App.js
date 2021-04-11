@@ -1,4 +1,4 @@
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -18,6 +18,7 @@ function App() {
         <Route path="/admin">
           <AdminLayout>
             <Switch>
+              <Redirect exact from="/admin" to="/admin/courses" />
               <Route path="/admin/courses">
                 <AdminCourses></AdminCourses>
               </Route>
