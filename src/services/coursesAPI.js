@@ -7,10 +7,11 @@ const coursesAPI = {
   getCoursesByCategory: (category) => {
     const params = {
       maDanhMuc: category,
+      maNhom: "GP01",
     };
     // return axiosClient.get(`/QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=${category}`);
     return axiosClient.get("/QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc", {
-      category,
+      params,
     });
   },
 };

@@ -4,7 +4,7 @@ import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Course from "./pages/Course";
-
+import LoginPage from "./pages/LoginPage";
 // Layout
 import AppLayout from "./layouts/AppLayout";
 import AdminLayout from "./layouts/AdminLayout";
@@ -39,6 +39,9 @@ function App() {
               </Route>
               <Route path="/course/:courseId">
                 <Course />
+              </Route>
+              <Route path="/login">
+                <LoginPage />
               </Route>
             </Switch>
           </AppLayout>
